@@ -5,22 +5,25 @@ função variável. Você pode acessar os argumentos adicionais adicionando um p
 Por exemplo:
 function sum(...argumentos)*/
 //-------------------------------------------
-function destroyer(...args) {
-    let array = [].concat.call(args);
-    let argumentMore = array.filter(array => array[0]);
-    array = array.filter(array=> !array[0]);
-    for (let i=0; i<argumentMore.length; i++){
-      for (let j=0; j<array.length; j++){
-        if (argumentMore[0][i] == array[j])
-        {argumentMore[0][i].pop();
-        continue;
-        };
-      }
-    }
+function destroyer(arr) {
+    //let array = [].concat.call(args);
+    let array = Array.from(arguments).slice(1);
+    let argumentMore = arr.filter(arrays => !array.includes(arrays));
+    //array = array.filter(array=> !array[0]);
+    //console.log(argumentMore)
+    //for (let i=0; i<array.length; i++){
+      //for (let j=0; j<argumentMore[0].length; j++){
+        //if (argumentMore[0][i] === array[i]){
+          //console.log(argumentMore[0]);
+          //argumentMore[0][i].pop();
+          //};
+     // }
+    //}
     
     
   
-    
+  return argumentMore;  
   }
   
-  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+//-------------------------------------------
