@@ -4,3 +4,4 @@ function pairElement(str) {
   }
   
   pairElement("GCG");
+//------------------------------------------------
