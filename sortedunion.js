@@ -1,20 +1,25 @@
 //---------------------------------------------
-function uniteUnique(arr, arr2, arr3) {
-  let unite = arr.concat(arr2).concat(arr3);
+function uniteUnique(...args) {
+  let unite = [...args];
   let arrayRepeat = [];
-  let arrayFinal = [];
   console.log(unite);
-  for (let i = 0; i< unite.length; i++){
-    let k = 1;
-    {arrayRepeat.push(unite[i]);
-    console.log(arrayRepeat[0])
-    for (let j = k; i< unite.length; j++){
-      if (arrayRepeat[i] == unite[j]){
-        
+  let allArgs = [...args];
+  let allArgsIndex = allArgs.length;
+  console.log(allArgsIndex);
+
+
+     for (let i = 0; i<unite.length; i++){
+        for ( let j = 0; j < allArgs[i].length; j++){
+          
+          if (!arrayRepeat.includes(args[i][j])) {
+        arrayRepeat.push(args[i][j]);
       }
-    }
-  }
+     }}
+     
+  
+  console.log(arrayRepeat);
+    
   return arrayRepeat;
 }
 
-uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])
