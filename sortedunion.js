@@ -8,17 +8,18 @@ function uniteUnique(...args) {
   console.log(allArgsIndex);
 
 
-     for (let i = 0; i<unite.length; i++){
-        for ( let j = 0; j < allArgs[i].length; j++){
-          
-          if (!arrayRepeat.includes(args[i][j])) {
+  for (let i = 0; i < unite.length; i++) {
+    for (let j = 0; j < allArgs[i].length; j++) {
+
+      if (!arrayRepeat.includes(args[i][j])) {
         arrayRepeat.push(args[i][j]);
       }
-     }}
-     
-  
+    }
+  }
+
+
   console.log(arrayRepeat);
-    
+
   return arrayRepeat;
 }
 
