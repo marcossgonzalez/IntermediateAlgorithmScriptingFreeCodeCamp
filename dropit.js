@@ -9,7 +9,6 @@ function dropElements(arr, func) {
                 arrayFinal.push(array[i]);
                 i++;
             }
-
         }
     }
     console.log(array);
