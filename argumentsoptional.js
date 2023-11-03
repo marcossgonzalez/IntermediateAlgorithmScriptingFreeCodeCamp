@@ -1,6 +1,6 @@
 //--------------------------------------------
 function addTogether() {
-    const [a, b] = arguments;
+    let [a, b] = arguments;
     if (typeof (a) !== "number") {
         return undefined;
     } else if (arguments.length === 1) {
