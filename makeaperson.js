@@ -1,26 +1,29 @@
 //-------------------------------------------
-const Person = function(first, last) {
+const Person = function (first, last) {
     let firstName = first;
     let lastName = last;
-    this.getFirstName = function(){
-      return firstName;
+
+    this.getFirstName = function () {
+        return firstName;
     };
-    this.getLastName= function(){
-      return lastName;
+    this.getLastName = function () {
+        return lastName;
     };
-    this.getFullName = function() {
-      return this.getFirstName() + " " + this.getLastName();
+    this.getFullName = function () {
+        return this.getFirstName() + " " + this.getLastName();
     };
-    this.setFirstName= function(first){
-      return firstName = first;
+    this.setFirstName = function (first) {
+        return firstName = first;
     };
-    this.setLastName= function(last){
-      return nameLast = last;
+    this.setLastName = function (last) {
+        return lastName = last;
     };
-    this.setFullName= function(first, last){
-      this.setFirstName(first);
-      this.setLastName(last);
-      return this.getFullName();
+    this.setFullName = function (first, last) {
+        this.setFirstName(first);
+        this.setLastName(last);
+        return this.getFullName();
     };
-  };
-  
+};
+let bob = new Person("Bob", "Ross");
+bob.setFullName('Haskell', 'Curry')
+console.log(bob.getFullName());
